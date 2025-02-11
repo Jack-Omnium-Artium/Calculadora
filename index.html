@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section id="Resultados">
+        <div id="Operaciones">0</div>
+        <div id="Respuestadeoperacion"></div>
+    </section>
+
+    <section id="Calculadora">
+        <section id="ContenedorNumeros">
+            <div >
+                <button class="botoncalculadora num1"  onclick="presionar(1)">1</button>
+            </div>
+            <div >
+                <button class="botoncalculadora num2" onclick="presionar(2)">2</button>
+            </div>
+            <div>
+                <button class="botoncalculadora num3" onclick="presionar(3)">3</button>
+            </div>
+            <div>
+                <button class="botoncalculadora num4"onclick="presionar(4)">4</button>
+            </div>
+            <div>
+                <button class="botoncalculadora num5" onclick="presionar(5)">5</button>
+            </div>
+            <div>
+                <button class="botoncalculadora num6"onclick="presionar(6)">6</button>
+            </div>
+            <div>
+                <button class="botoncalculadora num7" onclick="presionar(7)">7</button>
+            </div>
+            <div>
+                <button class="botoncalculadora num8" onclick="presionar(8)">8</button>
+            </div>
+            <div>
+                <button class="botoncalculadora num9" onclick="presionar(9)">9</button>
+            </div>
+            <div>
+                <button class="botoncalculadora num0" onclick="presionar(0)">0</button>
+            </div>
+            <div>
+                <button class="botoncalculadora mas-menos" onclick="presionar()">+/-</button>
+            </div>
+            <div>
+                <button class="botoncalculadora punto" onclick="presionar()">.</button>
+            </div>
+        </section>
+
+        <section id="ListadeOperadores">
+            <div>
+                <button id="AC" onclick="limpiar()">AC</button>
+            </div>
+            <div>
+                <button class="parentesis" onclick="limpiar()">( )</button>
+            </div>
+            <div>
+                <button class="Operadores porcentaje" onclick="limpiar()">%</button>
+            </div>
+            <div>
+                <button class="Operadores operador1" onclick="suma('+')">+</button>
+            </div>
+            <div>
+                <button class="Operadores operador2" onclick="resta('-')">-</button>
+            </div>
+            <div>
+                <button class="Operadores operador3" onclick="multiplicar('*')">*</button>
+            </div>
+            <div>
+                <button class="Operadores operador4" onclick="multiplicar('/')">/</button>
+            </div>
+            <div>
+                <button class="Operadores igual" onclick="ejecutaroperacion()">=</button>
+            </div>
+        </section>
+    </section>
+    <footer></footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>

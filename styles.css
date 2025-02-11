@@ -1,0 +1,88 @@
+html, body {
+    margin: 5px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    background-color: var(--Negro-fondo);
+    color: var(--Blanco-Numeros);
+    
+    
+}
+:root {
+    --Negro-fondo: rgb(0, 0, 0);
+    --Verde-Operadores: rgb(49, 255, 18);
+    --Blanco-Numeros: rgb(255, 255, 255);
+    --Negro-fondo-Numeros: rgb(15, 15, 15);
+    --Negro2-fondo-Numeros: rgb(80, 80, 80);
+    --Gris-fondo-Operadores: rgb(40, 40, 40);
+    --Gris2-fondo-Operadores: rgb(100, 100, 100);
+    --Naranja-Ac: rgb(250, 96, 24);
+
+}
+
+button {
+    all: unset;
+    border: .5px;
+    height: 50px;
+    width: 50px;
+    border-radius:100%;
+    font-size: .5rem;
+    text-align: center;
+
+}
+
+
+#Calculadora{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+
+}
+
+#ContenedorNumeros, #ListadeOperadores {
+    display: contents; /* Elimina la interferencia de los contenedores intermedios */
+}
+
+#AC { grid-column: 1; grid-row: 1; }
+.parentesis { grid-column: 2; grid-row: 1; }
+.porcentaje { grid-column: 3; grid-row: 1; }
+.num1 {grid-column: 2; grid-row: 2;}
+
+
+
+#ContenedorNumeros button{
+    background-color: var(--Negro-fondo-Numeros);
+}
+#ListadeOperadores button{
+    background-color: var(--Gris-fondo-Operadores);
+    color: var(--Verde-Operadores);
+}
+
+
+#Resultados {
+    text-align: right;
+}
+
+#Resultados div {
+    margin: 5px;
+}
+
+#Respuestadeoperacion {
+    height: 40px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
