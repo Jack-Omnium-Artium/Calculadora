@@ -108,7 +108,7 @@ button {
 }
 
 #AC {
-    color: red;
+    color: var(--Naranja-Ac);
 }
 
 
