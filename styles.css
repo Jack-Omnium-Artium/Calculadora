@@ -8,6 +8,7 @@ html, body {
     
     
 }
+
 :root {
     --Negro-fondo: rgb(0, 0, 0);
     --Verde-Operadores: rgb(49, 255, 18);
@@ -34,30 +35,64 @@ button {
 
 #Calculadora{
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10px;
+    text-align: center;
+    grid-template-areas: 
+      "AC parentesis porcentaje dividir"
+        "num7 num8 num9 multiplicar"
+        "num4 num5 num6 restar"
+        "num1 num2 num3 sumar"
+        "mas-menos num0 punto igual";
 
 }
 
-#ContenedorNumeros, #ListadeOperadores {
-    display: contents; /* Elimina la interferencia de los contenedores intermedios */
+
+
+
+#AC { grid-area: AC;}
+.parentesis { grid-area: parentesis; }
+.porcentaje { grid-area: porcentaje; }
+.operador-dividir { grid-area: dividir; }
+.num7 { grid-area: num7; }
+.num8 { grid-area: num8; }
+.num9 { grid-area: num9; }
+.operador-multiplicar { grid-area: multiplicar;}
+.num4 { grid-area: num4; }
+.num5 { grid-area: num5; }
+.num6 { grid-area: num6; }
+.operador-resta { grid-area: restar; }
+.num1 {grid-area: num1;}
+.num2 { grid-area: num2; }
+.num3 { grid-area: num3; }
+.operador-suma { grid-area: sumar; }
+.mas-menos { grid-area: mas-menos; }
+.num0 { grid-area: num0; }
+.punto { grid-area: punto;}
+.igual { grid-area: igual;}
+
+
+
+
+
+.boton-numero {
+    background-color: var(--Negro-fondo-Numeros);
 }
 
-#AC { grid-column: 1; grid-row: 1; }
-.parentesis { grid-column: 2; grid-row: 1; }
-.porcentaje { grid-column: 3; grid-row: 1; }
-.num1 {grid-column: 2; grid-row: 2;}
+.boton-funcion {
+    background-color: var(--Gris-fondo-Operadores);
+    color: var(--Verde-Operadores);
+}
 
-
-
-#ContenedorNumeros button{
+/*#ContenedorNumeros button{
     background-color: var(--Negro-fondo-Numeros);
 }
 #ListadeOperadores button{
     background-color: var(--Gris-fondo-Operadores);
     color: var(--Verde-Operadores);
 }
-
+*/
 
 #Resultados {
     text-align: right;
@@ -70,6 +105,10 @@ button {
 #Respuestadeoperacion {
     height: 40px;
     width: 100%;
+}
+
+#AC {
+    color: var(--Naranja-Ac);
 }
 
 
